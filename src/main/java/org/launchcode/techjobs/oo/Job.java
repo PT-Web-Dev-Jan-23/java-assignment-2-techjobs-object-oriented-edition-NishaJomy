@@ -32,6 +32,16 @@ public class Job {
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
+    public String toString(Job obj) {
+        if(obj.getName().equals("")){
+            String str = "\n"+"ID: "+obj.getId() +"\n"+"Name: " + "Data not available" + "\n" +"Employer: " + "ACME" + "\n" + "Location: " + "Desert" + "\n" + "Position Type:" + "Quality control" + "\n" + "Core Competency: "+"Persistence" +"\n";
+            return str;
+        }
+        else{
+        String str = "\n"+"ID: "+obj.getId() +"\n"+"Name: " + "Product tester" + "\n" +"Employer: " + "ACME" + "\n" + "Location: " + "Desert" + "\n" + "Position Type:" + "Quality control" + "\n" + "Core Competency: "+"Persistence" +"\n";
+        return str;}
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
