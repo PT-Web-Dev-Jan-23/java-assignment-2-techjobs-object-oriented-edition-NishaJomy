@@ -2,15 +2,21 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Location {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
+public class Location extends JobField {
+
+//    private int id;
+//    private static int nextId = 1;
+//    private String value;
 
     public Location() {
         id = nextId;
         nextId++;
+    }
+
+    public Location(String value) {
+        this();
+        this.value = value;
     }
 
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
@@ -19,10 +25,10 @@ public class Location {
 
     // Custom toString, equals, and hashCode methods:
 
-    @Override
-    public String toString() {
-        return value;
-    }
+//    @Override
+//    public String toString() {
+//        return value;
+//    }
 
     @Override
     public boolean equals(Object o) {
@@ -44,6 +50,9 @@ public class Location {
     }
 
     public String getValue() {
+        if (value == null || value.isEmpty()) {
+            return "Data not available";
+        }
         return value;
     }
 
